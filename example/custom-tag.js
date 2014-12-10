@@ -52,6 +52,9 @@ var removeCommentWalker = new Walker();
 removeCommentWalker.handle = function(node, callback){
   if(node.nodeName != '#comment'){
     callback(node);
+    if(node.nodeName == 'h1'){
+    console.log(node);
+    }
   }else{
     callback(null);
   }
